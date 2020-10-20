@@ -3,8 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Scope Firebase Tutorial</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
     <!-- Signature pad script  -->
@@ -21,7 +20,7 @@
       <form id="myForm" class="form">
         <div class="form-group">
           <label>Email</label>
-          <input type="text" class="form-control" id="user" name="user">
+          <input type="text" class="form-control" id="email" name="email">
         </div>
 
         <div class="form-group">
@@ -48,7 +47,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
 
     <script>
-      // Your web app's Firebase configuration
+      // Your web app's Firebase configuration: You should put your own keys here!
       // For Firebase JS SDK v7.20.0 and later, measurementId is optional
       var firebaseConfig = {
         apiKey: "AIzaSyAtcJ4khrc9mdNYPmK_tnWXNWPx-4hkieI",
@@ -82,7 +81,7 @@
       formElem.addEventListener('submit', (e) => {
         e.preventDefault();
 
-        firebase.auth().signInWithEmailAndPassword(document.querySelector('#user').value, document.querySelector('#password').value).catch(function(error) {
+        firebase.auth().signInWithEmailAndPassword(document.querySelector('#email').value, document.querySelector('#password').value).catch(function(error) {
           // Handle Errors here.
           var errorCode = error.code;
           var errorMessage = error.message;

@@ -3,8 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Scope Firebase Tutorial</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
     <!-- Signature pad script  -->
@@ -21,7 +20,7 @@
       <form id="myForm" class="form">
         <div class="form-group">
           <label>Email</label>
-          <input type="text" class="form-control" id="user" name="user">
+          <input type="text" class="form-control" id="email" name="email">
         </div>
 
         <div class="form-group">
@@ -37,6 +36,20 @@
         <button type="button" class="btn btn-outline-danger">Log Out</button>
       </form>
     </div>
-
+    
+    <!-- Put Firebase API scripts here -->
+      
+    <script>
+      const formElem = document.querySelector('form');
+      formElem.addEventListener('submit', (e) => {
+        e.preventDefault();
+        console.log("Submitted");
+        
+        // Put more JS here :^)
+        
+        formElem.reset();
+      });
+    </script>
+    
   </body>
 </html>
